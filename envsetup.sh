@@ -7,8 +7,8 @@
 #
 # And add the following statement to the `~/.bashrc` or `~/.bash_profile`:
 # ```
-# if [ -f "~/.edenrc" ]; then
-#     source "~/.edenrc"
+# if [ -f ~/.edenrc ]; then
+#   source ~/.edenrc
 # fi
 # ```
 
@@ -65,5 +65,5 @@ alias vp='cat "$EDEN_RC"'
 alias ep='vim "$EDEN_RC"'
 
 if [ -f "$EDEN_ALIASES" ]; then
-    source "$EDEN_ALIASES"
+  source "$EDEN_ALIASES"
 fi
