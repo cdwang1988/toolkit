@@ -7,6 +7,7 @@
 
 export EDEN_RC=~/.edenrc
 export EDEN_ALIASES=~/.eden_aliases
+export EDEN_ENV=~/.eden_env
 
 gitroot() {
   local dir="$PWD"
@@ -52,6 +53,7 @@ del() {
 }
 
 alias all='type -a'
+alias q='exit'
 alias va='cat "$EDEN_ALIASES"'
 alias ea='vim "$EDEN_ALIASES"'
 alias vc='cat "$EDEN_RC"'
@@ -60,4 +62,8 @@ alias uc='curl -o "$EDEN_RC" https://raw.githubusercontent.com/cdwang1988/toolki
 
 if [ -f "$EDEN_ALIASES" ]; then
   source "$EDEN_ALIASES"
+fi
+
+if [ -f "$EDEN_ENV" ]; then
+  source "$EDEN_ENV"
 fi
