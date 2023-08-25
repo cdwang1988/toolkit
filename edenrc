@@ -52,12 +52,15 @@ del() {
   unalias $alias_name
 }
 
-alias all='type -a'
+alias a='alias'
 alias q='exit'
+alias t='type -a'
 alias va='cat "$EDEN_ALIASES"'
 alias ea='vim "$EDEN_ALIASES"'
-alias vc='cat "$EDEN_RC"'
-alias ec='vim "$EDEN_RC"'
+alias ve='cat "$EDEN_ENV"'
+alias ee='vim "$EDEN_ENV"'
+alias vr='cat "$EDEN_RC"'
+alias er='vim "$EDEN_RC"'
 alias uc='curl -o "$EDEN_RC" https://raw.githubusercontent.com/cdwang1988/toolkit/main/edenrc'
 
 if [ -f "$EDEN_ALIASES" ]; then
