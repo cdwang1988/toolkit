@@ -2,14 +2,7 @@
 #
 # Download the file using the following command:
 # ```
-# curl -o ~/.edenrc https://raw.githubusercontent.com/cdwang1988/toolkit/main/edenrc
-# ```
-#
-# And add the following statement to the `~/.bashrc` or `~/.bash_profile`:
-# ```
-# if [ -f ~/.edenrc ]; then
-#   source ~/.edenrc
-# fi
+# curl -o ~/.edenrc https://raw.githubusercontent.com/cdwang1988/toolkit/main/edenrc && source ~/.edenrc && echo -e '\nYou will probably want to put this in your `~/.bashrc` or equivalent:\n```\nif [ -f ~/.edenrc ]; then\n  source ~/.edenrc\nfi\n```\n'
 # ```
 
 export EDEN_RC=~/.edenrc
@@ -27,7 +20,7 @@ gitroot() {
   echo "$dir"
 }
 
-defa() {
+def() {
   local alias_name="$1"
   local alias_definition="$2"
 
@@ -52,7 +45,7 @@ defa() {
   alias "$alias_name"
 }
 
-dela() {
+del() {
   local alias_name="$1"
   sed -i "/alias $alias_name=.*/d" "$EDEN_ALIASES"
   unalias $alias_name
