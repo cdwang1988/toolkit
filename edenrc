@@ -36,7 +36,7 @@ def() {
   # Check if the alias already exists in the .eden_aliases file
   touch "$EDEN_ALIASES"
   if grep -q "alias $alias_name=" "$EDEN_ALIASES"; then
-    sed -i "s|alias $alias_name=.*|alias $alias_name='$alias_definition'|" "$EDEN_ALIASES"
+    sed -i '' "s|alias $alias_name=.*|alias $alias_name='$alias_definition'|" "$EDEN_ALIASES"
   else
     echo "alias $alias_name='$alias_definition'" >>"$EDEN_ALIASES"
   fi
